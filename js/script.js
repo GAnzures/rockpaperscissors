@@ -1,14 +1,22 @@
-$("play").click(function() {
+let randomNumber = 0;
+$(".play").click(function() {
+  randomNumber = Math.random()*3;
   let choice = $(".input").val();
   $(".userChoice").text(choice);
-  let playerChoice;
   
-  if(playerChoice === 'rock'){
-    playerChoice
+  let computerChoice = "No choice"
+  
+  if (randomNumber <= 1){
+    computerChoice = "Rock";
+  } else if (randomNumber > 1 && randomNumber <= 2){
+    computerChoice = "Paper"
+  } else {
+    computerChoice = "Scissors"
   }
+  $(".computerChoice").text(computerChoice)
   
-let rock =1;
-let paper =2;
-let scisors =3;
-  
+  //Figure out how to deicde who won
 });
+
+
+
